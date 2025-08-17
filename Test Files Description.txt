@@ -1,0 +1,67 @@
+Test Files Description:
+
+1. File1.txt (25 events)
+   - Key Scenarios Tested:
+        * assigning orders by priority.
+        *  handling specialized chefs
+        * Order modifications:
+            -  promoting order (P at TS#7)
+2. File2.txt(50 events)
+- Key Scenarios Tested:
+        * Order assignment priority rules:
+        * Order modifications:
+            - Cancellation (order #133 at TS=40)
+            - Promotion (order #129 at TS=46)
+        * Auto-promotion threshold (AutoP=50):
+            - Normal orders waiting >50 timesteps auto-promoted
+        * Mixed event types:
+            - Arrivals (R), Cancellations (X), Promotions (P)
+
+3. File3.txt (75 events)
+   - Key Scenarios Tested:
+        * Chef break system:
+            - Break after 4 orders (BO=4)
+            - Different break durations per chef type
+        * Comprehensive order modifications:
+            - Multiple cancellations 
+            - Multiple promotions 
+        * Auto-promotion handling (AutoP=15):
+            - Normal orders waiting >15 timesteps auto-promoted
+
+4. File4.txt (100 events)
+  -Key Scenarios Tested:
+    *Chef break system:
+     -Break after 3 orders (BO=3) - frequent breaks
+      -Break durations: Normal chef (1), Vegan chefs (7,5,3), VIP chefs (2,5)
+    *Comprehensive order modifications:
+     -Cancellations: orders #209 (TS=13), #223 (TS=29), #225 (TS=36), #238 (TS=52), #241 (TS=53), #262 (TS=95), #264 (TS=99), #273 (TS=126), #281 (TS=135)
+     -Promotions: orders #209 (TS=12), #220 (TS=24), #223 (TS=35), #238 (TS=55), #261 (TS=100), #263 (TS=104), #269 (TS=130)
+    *Auto-promotion handling (AutoP=20):
+    *Normal orders waiting >20 timesteps auto-promoted
+    *Single normal chef are severely present increasing auto-promotions
+
+
+5. File5.txt (125 events)
+  -Key Scenarios Tested:
+  *Chef break system:
+    -Break after 5 orders (BO=5) - moderate break frequency
+    -Break durations: Normal chefs (4,3,2,4,3), Vegan chefs (4,3,3), VIP chefs (3,2,3,2)
+  *Comprehensive orders :
+    -Cancellations: orders #5 (TS=6), #9 (TS=15), #20 (TS=33), #25 (TS=38), #42 (TS=59), #47 (TS=64), #49 (TS=65), #64 (TS=85), #69 (TS=90), #71 (TS=91), #86 (TS=111), #91 (TS=116)
+    -Promotions: orders #7 (TS=7), #11 (TS=16), #23 (TS=34), #27 (TS=39), #45 (TS=60), #49 (TS=65), #67 (TS=86), #71 (TS=91), #89 (TS=112), #93 (TS=117)
+  *Auto-promotion handling (AutoP=20):
+  *Normal orders waiting >20 timesteps auto-promoted
+   -increased auto-promoted orders.
+
+
+6. File6.txt (150 events) 
+  -Key Scenarios Tested:
+   *Chef break system: 
+       -Break after 3 orders (BO=3) - frequent breaks under high load
+       -Break durations: Normal chefs (2,5,3), Vegan chefs (4,6), VIP chef (5)
+    *Comprehensive orders:
+        -Cancellations: orders #411 (TS=18), #418 (TS=27), #444 (TS=54), #454 (TS=68), #509 (TS=149), #516 (TS=172), #524 (TS=185)
+       -Promotions: orders #412 (TS=27), #440 (TS=54), #459 (TS=78), #488 (TS=126), #510 (TS=151), #518 (TS=171), #521 (TS=185)
+    *Auto-promotion handling (AutoP=60):
+        -Normal orders waiting >60 timesteps auto-promoted
+         -Highest threshold.
